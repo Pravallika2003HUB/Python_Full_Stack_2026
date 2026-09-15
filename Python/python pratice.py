@@ -1,78 +1,41 @@
 '''
-1--> print("hello world! ")
+input formatting : accept input frpm user
+integer,float,string,comma separated values,space separated values
 
-2--> Calculate the sum of two numbers
-    Approach
-    Take two numbers as input.
-    Add them.
-    Print the result.
-eg
----
-num1 = int(input("enter first number: "))
-num2 = int (input("enter second number: "))
+#input from user ---> input()
 
-sum = num1 + num2
-print("sum =", sum)
+name = input("enter the name:")
+print(name)
+print(type(name))
+print(len(name))
 
-3-->Write a Python program to calculate the area of a rectangle given its length and width.
+#split()
+#by default it will be space separated
+name = input("enter the name:").split(',')
+print(name)
+print(type(name))
+print(len(name))
 
-     Take length from the user.
-    Take width from the user.
-    Multiply them.
-    Store the result.
-    Print the result.   
-eg
----
-length = float(input("enter the length: "))
-width = float(input("enter the width: "))
+#accept single integer,multiple integer values,group of integers
 
-area = length * width
-print("area of rectangle:", area)
-
-4-->Take a user's name and age as input and print a greeting message.
-    Take name.
-    Take age.
-    Print both in a greeting
-eg
---
-name = input("entre your name: ")
-age = int(input("enter your age: "))
-
-print("hello", name)
-print("you are", age ," years old")
-
-5-->Check whether a number is even or odd.
-
-The important concept is the modulus operator %
-eg
----
-num = int(input("enter the number: "))
-if num % 2 == 0:
-    print("even")
-else:
-    print("odd")
+num1 = int(input("enter the number:"))
+print(num1)
+print(type(num1))
 
 
+#every built-in datatype is a built-in function--> functions --> object
 
+#usage of map()-->group of integers
+numbers = list(map(int,input("enter the values:").split(',')))
+print(numbers)
+print(type(numbers))
 
+#group of float values
+temperatures = list(map(float,input("enter the values:").split(',')))
+print(temperatures)
+print(type(temperatures))
 '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#accept multiple values--> integers,float,names(str)...
+temp,pressure = map(float,input("enter the values:").split(','))
+print("temp is",temp)
+print("pressure is",pressure)
